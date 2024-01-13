@@ -7,6 +7,7 @@ const ProjectCard = ({
   projectDescription,
   imageSource,
   skills,
+  link,
 }: Project) => {
   return (
     <>
@@ -16,13 +17,13 @@ const ProjectCard = ({
           <h3>
             <a
               className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-              href="https://www.newline.co/courses/build-a-spotify-connected-app"
+              href={link}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="Build a Spotify Connected App (opens in a new tab)"
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-              <span>{projectName} Ultra: Personal Project Tracker</span>
+              <span>{projectName}</span>
             </a>
           </h3>
           <p className="mt-2 text-sm leading-normal">
@@ -45,7 +46,7 @@ const ProjectCard = ({
           height="48"
           decoding="async"
           data-nimg="1"
-          src=""
+          src={imageSource}
           className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
           //   style="color:transparent"
         />

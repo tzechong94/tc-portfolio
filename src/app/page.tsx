@@ -1,27 +1,27 @@
 import JobCard from "@/components/JobCard";
 import ProjectCard from "@/components/ProjectCard";
-import { JOBS, Job, Jobs, PROJECTS } from "@/lib/constants";
-import Image from "next/image";
+import { JOBS, Job, Jobs, PROJECTS, SKILLS } from "@/lib/constants";
 
 export default function Home() {
   const jobs = JOBS;
   const projects = PROJECTS;
+  const skills = SKILLS;
 
   return (
-    <div className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-800 leading-relaxed text-slate-400 antialiased ">
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div className="lg:flex lg:justify-between lg:gap-4">
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                <a href="/">Hi, I'm Tze Chong</a>
+                <a href="/">Hi, I&apos;m Tze Chong</a>
               </h1>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
                 Software Developer at DBS
               </h2>
               <p className="mt-4 max-w-xs leading-normal">
-                I'm a Full Stack Developer, and I aspire to build great products
-                that people love.
+                I&apos;m a Full Stack Developer, and I aspire to build great
+                products that people love.
               </p>
               <nav
                 className="nav hidden lg:block"
@@ -61,6 +61,14 @@ export default function Home() {
                       </span>
                     </a>
                   </li>
+                  <li>
+                    <a className="group flex items-center py-3" href="#skills">
+                      <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
+                      <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                        Skills, Frameworks, Tools
+                      </span>
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -71,7 +79,7 @@ export default function Home() {
               <li className="mr-5 text-xs">
                 <a
                   className="block hover:text-slate-200"
-                  href="https://github.com/bchiang7"
+                  href="https://github.com/tzechong94"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="GitHub (opens in a new tab)"
@@ -91,7 +99,7 @@ export default function Home() {
               <li className="mr-5 text-xs">
                 <a
                   className="block hover:text-slate-200"
-                  href="https://www.linkedin.com/in/bchiang7/"
+                  href="https://www.linkedin.com/in/tze-chong-chua-915869118/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="LinkedIn (opens in a new tab)"
@@ -116,26 +124,27 @@ export default function Home() {
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="About me"
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   About
                 </h2>
               </div>
               <div>
                 <p className="mb-4">
-                  Made a career switch back in 2023 from Product Management in
-                  the med tech industry to join the exciting tech world. I had
-                  started a few small businesses prior to the switch, and am now
-                  writing software in the World's Best Bank.
+                  Made a career switch back in 2023 from product management to
+                  join the exciting tech world. I had started a few small
+                  businesses prior to the switch, and am now writing software in
+                  the World&apos;s Best Bank. 🏦
                 </p>
                 <p className="mb-4">
                   Being a bootcamp graduate, my main focus these days is to
-                  brush up on my CS fundamentals, learning the basics an
-                  engineer should know, in my free time.
+                  deepen my CS fundamentals, learning the basics an engineer
+                  should know. In my free time, I build personal projects to
+                  learn new things and solve problems I face. 🙊
                 </p>
                 <p>
-                  When I'm not studying or coding, I run without a destination,
-                  make pots and cups from clay, and do calisthenics.
+                  When I&apos;m not studying or coding, I run mostly at zone 2,
+                  do calisthenics and make pots from clay. 🍶
                 </p>
               </div>
             </section>
@@ -144,7 +153,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="Work experience"
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   Experience
                 </h2>
@@ -165,7 +174,7 @@ export default function Home() {
               <div className="mt-12">
                 <a
                   className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-semibold text-slate-200 group/link text-base"
-                  href="/resume.pdf"
+                  href="https://www.linkedin.com/in/tze-chong-chua-915869118/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="View Full Résumé (opens in a new tab)"
@@ -197,7 +206,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="Selected projects"
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   Projects
                 </h2>
@@ -210,6 +219,7 @@ export default function Home() {
                       projectName={project.projectName}
                       imageSource={project.imageSource}
                       skills={project.skills}
+                      link={project.link}
                     />
                   </li>
                 ))}
@@ -218,7 +228,7 @@ export default function Home() {
                 <a
                   className="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
                   aria-label="View Full Project Archive"
-                  href="/archive"
+                  href="/projects"
                 >
                   <span>
                     <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
@@ -247,91 +257,40 @@ export default function Home() {
               </div>
             </section>
             <section
-              id="projects"
+              id="skills"
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="Selected projects"
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                  Other Skills
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 ">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200">
+                  Skills, Frameworks & Tools
                 </h2>
               </div>
-              <ol className="projectList">
-                {projects.map((project) => (
-                  <li key={project.id} className="mb-12">
-                    <ProjectCard
-                      projectDescription={project.projectDescription}
-                      projectName={project.projectName}
-                      imageSource={project.imageSource}
-                      skills={project.skills}
-                    />
+              <ul
+                className="mt-2 flex flex-wrap"
+                aria-label="skills, frameworks and tools"
+              >
+                {skills.map((skill: string) => (
+                  <li className="mr-1.5 mt-2" key={skill}>
+                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                      {skill}
+                    </div>
                   </li>
                 ))}
-              </ol>
+              </ul>
             </section>
             <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
               <p>
-                Loosely designed in{" "}
+                Template designed by{" "}
                 <a
-                  href="https://www.figma.com/"
+                  href="https://brittanychiang.com/"
                   className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Figma (opens in a new tab)"
                 >
-                  Figma
+                  Brittany Chiang 🤩🤩🤩
                 </a>{" "}
-                and coded in{" "}
-                <a
-                  href="https://code.visualstudio.com/"
-                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Visual Studio Code (opens in a new tab)"
-                >
-                  Visual Studio Code
-                </a>{" "}
-                by yours truly. Built with{" "}
-                <a
-                  href="https://nextjs.org/"
-                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Next.js (opens in a new tab)"
-                >
-                  Next.js
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://tailwindcss.com/"
-                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Tailwind CSS (opens in a new tab)"
-                >
-                  Tailwind CSS
-                </a>
-                , deployed with{" "}
-                <a
-                  href="https://vercel.com/"
-                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Vercel (opens in a new tab)"
-                >
-                  Vercel
-                </a>
-                . All text is set in the{" "}
-                <a
-                  href="https://rsms.me/inter/"
-                  className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Inter (opens in a new tab)"
-                >
-                  Inter
-                </a>{" "}
-                typeface.
               </p>
             </footer>
           </main>
