@@ -1,6 +1,6 @@
 import JobCard from "@/components/JobCard";
 import ProjectCard from "@/components/ProjectCard";
-import { JOBS, Job, Jobs, PROJECTS, SKILLS } from "@/lib/constants";
+import { JOBS, PROJECTS, SKILLS } from "@/lib/constants";
 
 export default function Home() {
   const jobs = JOBS;
@@ -191,9 +191,9 @@ export default function Home() {
                         aria-hidden="true"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     </span>
@@ -246,9 +246,9 @@ export default function Home() {
                         aria-hidden="true"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     </span>
@@ -261,7 +261,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
               aria-label="Selected projects"
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 ">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 max-w-full">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200">
                   Skills, Frameworks & Tools
                 </h2>
