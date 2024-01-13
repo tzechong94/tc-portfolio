@@ -43,7 +43,8 @@ export const PROJECTS = [
   {
     id: 1,
     projectName: "Ultra",
-    projectDescription: "Ultra project adfadsf",
+    projectDescription:
+      "Ultra is a full stack project that helps track all your personal projects. Create project, create project updates and check progress over time",
     imageSource: "/ultra.png",
     skills: ["React", "Javascript", "Express", "NodeJS", "MongoDB"],
     link: "https://tryultra.vercel.app/",
@@ -51,7 +52,8 @@ export const PROJECTS = [
   {
     id: 2,
     projectName: "Stowee",
-    projectDescription: "Bedtime Story Generator",
+    projectDescription:
+      "Stowee is a bedtime generator built for my nephew, powered by OpenAI. Enter simple prompts like age, name and moral of the story, and watch your story come to life. Keep your kids occupied every night without running out of ideas.",
     imageSource: "/stowee.png",
     skills: ["React", "NextJS", "TypeScript", "OpenAI API"],
     link: "https://stowee.vercel.app/",
@@ -59,7 +61,8 @@ export const PROJECTS = [
   {
     id: 3,
     projectName: "ChatPDF",
-    projectDescription: "Bedtime Story Generator",
+    projectDescription:
+      "Chat with any PDF and have ChatGPT summarize it for you. This is a tutorial created by Eliott Chong, with some edits to fix outdated code.",
     imageSource: "/chatpdf.png",
     skills: [
       "React",
