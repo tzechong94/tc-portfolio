@@ -26,9 +26,7 @@ const ProjectCard = ({
               <span>{projectName}</span>
             </a>
           </h3>
-          <p className="mt-2 text-sm leading-normal">
-            {projectDescription} Hello
-          </p>
+          <p className="mt-2 text-sm leading-normal">{projectDescription}</p>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
             {skills.map((skill, index) => (
               <li className="mr-1.5 mt-2" key={index}>
