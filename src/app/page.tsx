@@ -4,7 +4,7 @@ import { JOBS, PROJECTS, SKILLS } from "@/lib/constants";
 
 export default function Home() {
   const jobs = JOBS;
-  const projects = PROJECTS;
+  const projects = PROJECTS.filter((project) => project.id < 4);
   const skills = SKILLS;
 
   return (

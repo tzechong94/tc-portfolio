@@ -20,7 +20,7 @@ const ProjectCard = ({
               href={link}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Build a Spotify Connected App (opens in a new tab)"
+              aria-label="Description of project"
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
               <span>{projectName}</span>

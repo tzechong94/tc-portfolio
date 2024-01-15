@@ -44,7 +44,7 @@ export const PROJECTS = [
     id: 1,
     projectName: "Ultra",
     projectDescription:
-      "Ultra is a full stack project that helps track all your personal projects. Create project, create project updates and check progress over time",
+      "Ultra is a full stack project that helps track all your personal projects. Create project, create project updates and check progress over time. Previously, I built this on Angular and Java Spring Boot before redoing it on MERN.",
     imageSource: "/ultra.png",
     skills: ["React", "Javascript", "Express", "NodeJS", "MongoDB"],
     link: "https://tryultra.vercel.app/",
@@ -73,6 +73,57 @@ export const PROJECTS = [
       "NeonDB",
     ],
     link: "https://chatpdf-five-plum.vercel.app/",
+  },
+  {
+    id: 4,
+    projectName: "Simple Calculator",
+    projectDescription: "Built a Simple calculator with react.",
+    imageSource: "/calculator.png",
+    skills: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://tzechong94.github.io/basic-calculator/",
+  },
+  {
+    id: 5,
+    projectName: "Drum Machine",
+    projectDescription:
+      "Make music with this simple drum machine. Part of FreeCodeCamp's curriculum.",
+    imageSource: "/drum.png",
+    skills: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://tzechong94.github.io/drum-machine/",
+  },
+  {
+    id: 6,
+    projectName: "Random Quote Machine",
+    projectDescription:
+      "Inspire yourself with one of these quotes! Part of FreeCodeCamp's curriculum.",
+    imageSource: "/quote.png",
+    skills: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://tzechong94.github.io/random-quote-machine/",
+  },
+  {
+    id: 7,
+    projectName: "Markdown Previewer",
+    projectDescription:
+      "Built a markdown previewer as part of FreeCodeCamp's curriculum.",
+    imageSource: "/markdown.png",
+    skills: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://tzechong94.github.io/markdown-previewer/",
+  },
+  {
+    id: 8,
+    projectName: "GDP Viewer",
+    projectDescription: "",
+    imageSource: "/gdp.png",
+    skills: ["React", "HTML", "CSS", "JavaScript", "D3"],
+    link: "https://tzechong94.github.io/bar-chart/",
+  },
+  {
+    id: 9,
+    projectName: "Pomodoro Clock",
+    projectDescription: "Stay productive with this pomodoro clock!",
+    imageSource: "/pomodoro.png",
+    skills: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://tzechong94.github.io/pomodoro-clock/",
   },
 ];
 
