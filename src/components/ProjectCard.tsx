@@ -38,7 +38,7 @@ const ProjectCard = ({
           </ul>
         </div>
         <Image
-          alt="Build a Spotify Connected App Newline course marketing card"
+          alt={projectDescription}
           loading="lazy"
           width="200"
           height="48"
