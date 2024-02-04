@@ -59,10 +59,10 @@ export const PROJECTS = [
   },
   {
     id: 3,
-    projectName: "ChatPDF",
+    projectName: "AskDoc",
     projectDescription:
-      "Chat with any PDF and have ChatGPT summarize it for you. This is a tutorial created by Eliott Chong, with some edits to fix outdated code.",
-    imageSource: "/chatpdf.png",
+      "Explore your health insights by asking AskDoc for personalized advice about your health concerns, symptoms, and medication queries. Interact with AI chatbot to learn more about your medical document and symptoms.",
+    imageSource: "/askdoc.png",
     skills: [
       "React",
       "NextJS",
@@ -71,7 +71,7 @@ export const PROJECTS = [
       "Pinecone",
       "NeonDB",
     ],
-    link: "https://chatpdf-five-plum.vercel.app/",
+    link: "https://askdoc-healthhack.vercel.app/",
   },
   {
     id: 4,
