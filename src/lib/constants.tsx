@@ -37,6 +37,7 @@ export const SKILLS = [
   "Git",
   "Github",
   "BitBucket",
+  "FastAPI",
 ];
 export const PROJECTS = [
   {
