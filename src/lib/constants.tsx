@@ -167,7 +167,7 @@ export const PROJECTS: Project[] = [
     id: 13,
     projectName: "Gavid Doggins",
     projectDescription:
-      "A Telegram bot with David Goggins' personality. Set your wake and sleep hours and it fires motivational messages on your schedule to keep you accountable and stay hard.",
+      "A Telegram bot with David Goggins' personality. Set your wake and sleep hours and it fires motivational messages on your schedule to keep you accountable and stay hard. Traction: 40 real users from 2 Reddit posts.",
     imageSource: "/doggins.svg",
     skills: ["Node.js", "Express", "Telegram Bot API", "SQLite", "node-cron"],
     link: "https://t.me/dogginsbot",
@@ -351,7 +351,7 @@ export const JOBS: Job[] = [
     company: "Synapxe",
     companyUrl: "https://www.synapxe.sg/",
     description:
-      "Building HealthHub Plus, the consolidation of Singapore's public healthcare cluster apps into one national health app. Work across the appointments, medication refill, pharmacy queue, and AutoPay modules, serving millions of residents.",
+      "Working on HealthHub Modernisation and HealthHub Plus, the consolidation of Singapore's public healthcare cluster apps into one national health app. Built the appointments, medication refill, pharmacy queue, and AutoPay modules, serving millions of residents.",
     skills: [
       "React",
       "TypeScript",
