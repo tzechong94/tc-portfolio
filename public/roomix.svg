@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="875" viewBox="0 0 1400 875" role="img" aria-label="Roomix">
+  <defs>
+    <linearGradient id="g-roomix" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="r-roomix" cx="30%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="875" fill="#0f172a"/>
+  <rect width="1400" height="875" fill="url(#g-roomix)" opacity="0.92"/>
+  <rect width="1400" height="875" fill="url(#r-roomix)"/>
+  <text x="80" y="430" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial" font-size="92" font-weight="700" fill="#f8fafc" letter-spacing="-2">Roomix</text>
+  <text x="84" y="500" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="34" fill="#f8fafc" opacity="0.85">AI home staging</text>
+</svg>

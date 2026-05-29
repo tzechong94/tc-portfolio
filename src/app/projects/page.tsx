@@ -1,75 +1,40 @@
 import ProjectCard from "@/components/ProjectCard";
+import { ArrowLeftIcon } from "@/components/Icons";
 import { PROJECTS } from "@/lib/constants";
-import React from "react";
 
-const ProjectsPage = () => {
-  const projects = PROJECTS;
-
+export default function ProjectsPage() {
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-800 leading-relaxed text-slate-400 antialiased ">
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 font-sans md:px-12  lg:px-24">
-        <div className="lg:flex lg:justify-between lg:gap-4">
-          <main id="content" className="pt-24 lg:py-24">
-            <div className="pb-0">
-              <a
-                className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 font-semibold text-slate-200 group/link text-base"
-                href="/"
-                aria-label="Go back to portfolio"
-              >
-                <span>
-                  <span className="inline-block">
-                    Go back
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>
-                </span>
-              </a>
-            </div>
+    <div className="mx-auto w-full max-w-6xl px-6 pb-24 pt-12 md:px-10 md:pt-16">
+      <a
+        href="/"
+        className="group inline-flex items-center gap-1.5 text-sm font-medium text-slate-300 transition-colors hover:text-teal-300"
+        aria-label="Back to home"
+      >
+        <ArrowLeftIcon className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+        Back
+      </a>
 
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 py-8 sm:text-xl">
-              All Projects
-            </h2>
+      <header className="mt-10 max-w-2xl">
+        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-teal-300/80">
+          Archive
+        </p>
+        <h1 className="mt-2 bg-gradient-to-br from-slate-50 via-slate-200 to-slate-500 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
+          Every project, one place.
+        </h1>
+        <p className="mt-4 text-balance leading-relaxed text-slate-400">
+          From FreeCodeCamp practice apps to recent AI-native side
+          projects. The featured ones live on the home page.
+        </p>
+      </header>
 
-            <section
-              id="projects"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-              aria-label="Selected projects"
-            >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                  Projects
-                </h2>
-              </div>
-              <ol className="projectList">
-                {projects.map((project) => (
-                  <li key={project.id} className="mb-12">
-                    <ProjectCard
-                      projectDescription={project.projectDescription}
-                      projectName={project.projectName}
-                      imageSource={project.imageSource}
-                      skills={project.skills}
-                      link={project.link}
-                    />
-                  </li>
-                ))}
-              </ol>
-            </section>
-          </main>
-        </div>
-      </div>
+      <section
+        className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        aria-label="All projects"
+      >
+        {PROJECTS.map((project) => (
+          <ProjectCard key={project.id} {...project} showFeaturedBadge />
+        ))}
+      </section>
     </div>
   );
-};
-
-export default ProjectsPage;
+}

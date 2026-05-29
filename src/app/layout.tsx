@@ -1,13 +1,24 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import Spotlight from "@/components/Spotlight";
 import "./globals.css";
-import React from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TC's portfolio",
-  description: "Tze Chong's portfolio",
+  title: "Tze Chong · Software Developer",
+  description:
+    "Tze Chong is a full-stack developer with a builder's bias. Self-taught by habit, building whatever is interesting.",
+  metadataBase: new URL("https://tzechong.dev"),
+  openGraph: {
+    title: "Tze Chong · Software Developer",
+    description:
+      "Full-stack developer with a builder's bias. Self-taught by habit, building whatever is interesting.",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#020617",
 };
 
 export default function RootLayout({
@@ -16,8 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans antialiased">
+        <Spotlight />
+        <div className="relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

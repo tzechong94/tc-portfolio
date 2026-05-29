@@ -1,56 +1,98 @@
-import { Project } from "@/lib/constants";
 import Image from "next/image";
-import React from "react";
+import type { Project } from "@/lib/constants";
+import Pill from "./Pill";
+import { ArrowUpRightIcon } from "./Icons";
 
-const ProjectCard = ({
+type Props = Project & { showFeaturedBadge?: boolean };
+
+export default function ProjectCard({
   projectName,
   projectDescription,
   imageSource,
   skills,
   link,
-}: Project) => {
-  return (
+  featured,
+  year,
+  showFeaturedBadge = false,
+}: Props) {
+  const hasLink = Boolean(link);
+
+  const media = (
     <>
-      <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-        <div className="z-10 sm:order-2 sm:col-span-6">
-          <h3>
+      <Image
+        src={imageSource}
+        alt={`${projectName} screenshot`}
+        width={800}
+        height={500}
+        className="aspect-[16/10] h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        loading="lazy"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"
+      />
+      {showFeaturedBadge && featured && (
+        <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border border-teal-300/30 bg-slate-950/60 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-teal-300 backdrop-blur">
+          Featured
+        </span>
+      )}
+      {year && (
+        <span className="absolute right-3 top-3 inline-flex items-center rounded-full border border-slate-200/10 bg-slate-950/60 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-slate-400 backdrop-blur">
+          {year}
+        </span>
+      )}
+    </>
+  );
+
+  return (
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200/10 bg-slate-900/40 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-200/20 hover:bg-slate-900/60">
+      {hasLink ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label={`${projectName} (opens in a new tab)`}
+          className="relative block overflow-hidden"
+        >
+          {media}
+        </a>
+      ) : (
+        <div className="relative block overflow-hidden">{media}</div>
+      )}
+
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-lg font-semibold tracking-tight text-slate-50">
+          {hasLink ? (
             <a
-              className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
               href={link}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label="Description of project"
+              className="group/link inline-flex items-baseline gap-1 transition-colors hover:text-teal-300"
             >
-              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-              <span>{projectName}</span>
+              {projectName}
+              <ArrowUpRightIcon className="inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
             </a>
-          </h3>
-          <p className="mt-2 text-sm leading-normal">{projectDescription}</p>
-          <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
-            {skills.map((skill, index) => (
-              <li className="mr-1.5 mt-2" key={index}>
-                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
-                  {skill}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Image
-          alt={projectDescription}
-          loading="lazy"
-          width="200"
-          height="48"
-          decoding="async"
-          data-nimg="1"
-          src={imageSource}
-          className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-          //   style="color:transparent"
-        />
+          ) : (
+            projectName
+          )}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-slate-400">
+          {projectDescription}
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-1.5">
+          {skills.map((skill) => (
+            <li key={skill}>
+              <Pill>{skill}</Pill>
+            </li>
+          ))}
+        </ul>
+        {!hasLink && (
+          <p className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-slate-500">
+            <span className="h-1.5 w-1.5 rounded-full bg-slate-600" />
+            Private project
+          </p>
+        )}
       </div>
-    </>
+    </article>
   );
-};
-
-export default ProjectCard;
+}
