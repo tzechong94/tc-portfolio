@@ -159,7 +159,7 @@ export default function Home() {
               <div className="mt-3 grid grid-cols-3 gap-3 text-center">
                 <Stat value="3+" label="yrs coding" />
                 <Stat value="10+" label="shipped" />
-                <Stat value="S$100k+" label="earned from my projects" />
+                <Stat value="S$100k+" label="earned from personal projects" />
               </div>
             </BentoCard>
 
