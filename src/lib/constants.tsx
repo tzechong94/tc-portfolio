@@ -80,6 +80,44 @@ export const SKILL_GROUPS: { label: string; items: string[] }[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 21,
+    projectName: "Wingman",
+    projectDescription:
+      "AI storefront employee for small service businesses. Quotes jobs from the business's real rate card, sends PDF quotes, books actual appointments on the owner's cal.com, and remembers every customer via Engram memory. Anything consequential escalates to the owner's Telegram for one-tap approval. Built for the Qwen Cloud Global AI Hackathon.",
+    imageSource: "/wingman.png",
+    skills: [
+      "TypeScript",
+      "Node.js",
+      "Qwen",
+      "MCP",
+      "cal.com API",
+      "Telegram Bot API",
+      "Alibaba Cloud",
+    ],
+    link: "https://github.com/tzechong94/wingman",
+    featured: true,
+    year: "2026",
+  },
+  {
+    id: 22,
+    projectName: "Engram",
+    projectDescription:
+      "Self-managing memory layer for AI agents, attachable to any agent over MCP. Fast episodic capture and hybrid recall while active; during downtime a sleep/REM cycle consolidates raw episodes into durable knowledge, forgets the stale, and reconciles contradictions. Ships with a brain-graph viewer and a 12-gate eval suite that passes 3× on real Qwen. Built for the Qwen Cloud Hackathon.",
+    imageSource: "/engram.png",
+    skills: [
+      "TypeScript",
+      "Node.js",
+      "Qwen",
+      "MCP",
+      "pgvector",
+      "Redis",
+      "React",
+    ],
+    link: "https://github.com/tzechong94/engram",
+    featured: true,
+    year: "2026",
+  },
+  {
     id: 10,
     projectName: "HelloCher",
     projectDescription:
